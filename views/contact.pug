@@ -1,0 +1,192 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='../static/contact.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  title Contact
+header#header Welcome to Frame it out
+nav.navigation
+  #menu-bar
+    #menu
+      #bar1.bar
+      #bar2.bar
+      #bar3.bar
+  ul.ulist
+    li.item
+      a(href='/fio')  Home
+    li.item.dropdown
+      a(href='/mywork')  My work 
+      a(href='#')
+        svg.icon(width='30' height='16' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 320 512' onclick='dropdown() ')
+          path(d='M151.5 347.8L3.5 201c-4.7-4.7-4.7-12.3 0-17l19.8-19.8c4.7-4.7 12.3-4.7 17 0L160 282.7l119.7-118.5c4.7-4.7 12.3-4.7 17 0l19.8 19.8c4.7 4.7 4.7 12.3 0 17l-148 146.8c-4.7 4.7-12.3 4.7-17 0z')
+      // Start of Dropdown
+      ul.dropdown-nav
+        li
+          a(href='/maternity') Maternity
+        li
+          a(href='/newborn') Newborn
+        li
+          a(href='/infant') Infant
+        li
+          a(href='/sitter') Sitter
+        li
+          a(href='/cakesmash') Cakesmash
+        li
+          a(href='/outdoor') Outdoor
+        li
+          a(href='/toddler') Toddler
+        li
+          a(href='/family') Family
+    li.item.current
+      a(href='/contact')  Contact
+    li.item
+      a(href='/blog')  Blog
+    li.item
+      a(href='/reviews')  Reviews
+    li.item
+      a(href='/about')  About
+    ul.social-container
+      a.fa.fa-facebook(href='https://www.facebook.com/Frameitout123/' target='_blank')
+      a.fa.fa-instagram(href='https://www.instagram.com/frameitout/' target='_blank')
+section.title
+  div
+    p
+      | Give yourself and your family the best memories for life with Frame It Out Photography.
+section.grid-contact-container
+  .grid-contact-items
+    p#grid-contact-item-heading  CONTACT.
+    br
+    p.grid-contact-item-material
+      | Please feel free to let us know if you are looking to book a session or would like to know more. Fill in the details and we will try to get back to you within few hours.
+    br
+    hr
+    br
+    p.grid-contact-item-material
+      | Contact us here to schedule date availability followed by a meet up consultation to discuss details, packages and more.
+    br
+    p.grid-contact-item-material (+91) 987 367 2580
+    br
+    p.grid-contact-item-material info@frameitoutphotography.com
+    // map
+    .map-container
+      iframe.map(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.543852228228!2d77.31966331549235!3d28.4330176998327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdd9a1af62b37%3A0xbc7cc5157e715afd!2sFrame%20It%20Out%20-%20Baby%2C%20Maternity%20%26%20Newborn%20Photographer!5e0!3m2!1sen!2sin!4v1629950564389!5m2!1sen!2sin' style='border:0;' allowfullscreen='' loading='lazy')
+  .grid-contact-items
+    form(action='/contact' method='post')
+      label(for='fname')  First Name
+      input#fname(type='text' name='fname' placeholder='Your first name...')
+      label(for='lname')  Last Name
+      input#lname(type='text' name='lname' placeholder='Your last name...')
+      label(for='based')  Where are you based?
+      input#based(type='text' name='based' placeholder='Example: Gurugram')
+      label(for='number')  Phone Number
+      input#number(type='text' name='number' placeholder="Don't worry, we will not share it with anyone else.")
+      label(for='mail')  Email
+      input#mail(type='text' name='mail' placeholder='abc@example.com')
+      br
+      br
+      br
+      p What service(s) are you looking for?
+      br
+      input(type='checkbox' name='maternity' value='maternity')
+      label(for='maternity')  Maternity Session
+      br
+      br
+      input(type='checkbox' name='newborn' value='newborn')
+      label(for='newborn')  Newborn Session
+      br
+      br
+      input(type='checkbox' name='infant' value='infant')
+      label(for='infant')  Infant Session
+      br
+      br
+      input(type='checkbox' name='sitter' value='sitter')
+      label(for='sitter')  Sitter Session
+      br
+      br
+      input(type='checkbox' name='cakesmash' value='cakesmash')
+      label(for='cakesmash')  Cakesmash Session
+      br
+      br
+      input(type='checkbox' name='toddler' value='toddler')
+      label(for='toddler')  Toddler Session
+      br
+      br
+      input(type='checkbox' name='family' value='family')
+      label(for='family')  Family Session
+      br
+      br
+      br
+      label(for='msg')  Message
+      textarea#msg(name='msg' cols='50' rows='7' placeholder='Any special requests or queries?')
+      br
+      br
+      label(for='date')  Any specific date for the session?
+      br
+      br
+      input#dte(type='date' name='date')
+      br
+      br
+      br
+      hr
+      br
+      label(for='how')  How did you hear about Frame it out?
+      select(name='how')
+        option(selected='' hidden='') Choose here
+        option(value='Through Friend') Friend
+        option(value='Through family member') Family member
+        option(value='Good ol google search') Google search
+        option(value='Through website') Website
+        option(value='Through an ad') Ad
+        option(value='Through Instagram.') Instagram
+        option(value='Through Facebook') Facebook
+        option(value='Through Pinterest') Pinterest
+        option(value='Other') Other
+      input(type='submit' value='SEND')
+hr
+footer
+  .btn-container
+    a(href='/mywork')
+      button.btn(type='button')  View Portfolio
+    a(href='/contact')
+      button.btn(type='button')  Get in touch
+  div
+    p#headingfooter.footermaterial
+      | Frame It Out Photography By Parul Agarwal
+  div
+    p#contactfooter.footermaterial2
+      | Contact : +91-9873672580
+    p.footermaterial2
+      | Email : info@frameitoutphotography.com
+script.
+  //Dropdown open and close with the help of css and javascript. Toggling different classes of CSS with a click. .dropdown-done opens up the menu while .dropdown-close closes it.
+  let myworkicon = document.getElementsByTagName('svg');
+  let mywork = document.getElementsByClassName("dropdown")
+  function dropdown(){
+  // let mywork = document.getElementsByClassName("dropdown")
+  mywork[0].classList.add("dropdown-done")
+  mywork[0].classList.remove("dropdown-close")
+  }
+  document.addEventListener('click', function(event) {
+  var isClickInside = mywork[0].contains(event.target);
+  if (!isClickInside) {
+  //the click was outside the specifiedElement, do something
+  // alert("clicked outside!")
+  mywork[0].classList.add("dropdown-close")
+  mywork[0].classList.remove("dropdown-done")
+  }
+  });
+  const onClickMenu = () => {
+  const menu = document.getElementById('menu');
+  const ulist = document.querySelector('.ulist');
+  menu.addEventListener('click', () =>{
+  ulist.classList.toggle('ulist-active');
+  //animating the burger lines
+  menu.classList.toggle('change');
+  });
+  }
+  onClickMenu()

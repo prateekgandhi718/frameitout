@@ -1,0 +1,124 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='https://unpkg.com/aos@next/dist/aos.css')
+  link(rel='stylesheet' href='about.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  title Reviews
+header#header Welcome to Frame it out
+nav.navigation
+  #menu-bar
+    #menu
+      #bar1.bar
+      #bar2.bar
+      #bar3.bar
+  ul.ulist
+    li.item
+      a(href='/')  Home
+    li.item.dropdown
+      a(href='/mywork')  My work 
+      a(href='#')
+        svg.icon(width='30' height='16' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 320 512' onclick='dropdown() ')
+          path(d='M151.5 347.8L3.5 201c-4.7-4.7-4.7-12.3 0-17l19.8-19.8c4.7-4.7 12.3-4.7 17 0L160 282.7l119.7-118.5c4.7-4.7 12.3-4.7 17 0l19.8 19.8c4.7 4.7 4.7 12.3 0 17l-148 146.8c-4.7 4.7-12.3 4.7-17 0z')
+      // Start of Dropdown
+      ul.dropdown-nav
+        li
+          a(href='/maternity') Maternity
+        li
+          a(href='.newborn') Newborn
+        li
+          a(href='/infant') Infant
+        li
+          a(href='/sitter') Sitter
+        li
+          a(href='/cakesmash') Cakesmash
+        li
+          a(href='/outdoor') Outdoor
+        li
+          a(href='/toddler') Toddler
+        li
+          a(href='/family') Family
+    li.item
+      a(href='/contact')  Contact
+    li.item
+      a(href='/blog')  Blog
+    li.item
+      a(href='/reviews')  Reviews
+    li.item.current
+      a(href='/about')  About
+    ul.social-container
+      a.fa.fa-facebook(href='https://www.facebook.com/Frameitout123/' target='_blank')
+      a.fa.fa-instagram(href='https://www.instagram.com/frameitout/' target='_blank')
+.grid-container
+  .grid-item(data-aos='fade-down')
+    p.grid-caption1
+      | Since, I miss my Childhood with not enough pictures for the memories, I try to capture that special phase for the Parents and the kids.
+    br
+    br
+    br
+    br
+    hr
+    br
+    br
+    br
+    br
+    section
+      p.grid-caption2
+        | Born and raised in Kanpur, Uttar Pradesh. I did my Bachelors in Computer Science &amp; Technology from Amity University, Noida. Though I was always a Scholar in School and College but my Passion for Photography and Love for Kids made me quit my 9-5 Job with Wipro Technologies. And now here I am with over 4 years of professional photography experience. I fell in love with love and photographing Kids and Parenthood has been my favorite moment to capture with a vision to capture these Little Ones before they could enter and face the world.
+    br
+    section
+      p.grid-caption2
+        | I decided to do Maternity and Baby Photography as this gives memories to the Parents which they will cherish for their entire life, because creating memories and giving happiness is what Frame It Out is all about.
+  .grid-item(data-aos='fade-up')
+    img(src='about.JPG' alt='about')
+footer
+  .btn-container
+    a(href='/mywork')
+      button.btn(type='button')  View Portfolio
+    a(href='/contact')
+      button.btn(type='button')  Get in touch
+  div
+    p#headingfooter.footermaterial
+      | Frame It Out Photography By Parul Agarwal
+  div
+    p#contactfooter.footermaterial2
+      | Contact : +91-9873672580
+    p.footermaterial2
+      | Email : info@frameitoutphotography.com
+script(src='https://unpkg.com/aos@next/dist/aos.js')
+script.
+  AOS.init({
+  duration: 1000
+  });
+  //Dropdown open and close with the help of css and javascript. Toggling different classes of CSS with a click. .dropdown-done opens up the menu while .dropdown-close closes it.
+  let myworkicon = document.getElementsByTagName('svg');
+  let mywork = document.getElementsByClassName("dropdown")
+  function dropdown(){
+  // let mywork = document.getElementsByClassName("dropdown")
+  mywork[0].classList.add("dropdown-done")
+  mywork[0].classList.remove("dropdown-close")
+  }
+  document.addEventListener('click', function(event) {
+  var isClickInside = mywork[0].contains(event.target);
+  if (!isClickInside) {
+  //the click was outside the specifiedElement, do something
+  // alert("clicked outside!")
+  mywork[0].classList.add("dropdown-close")
+  mywork[0].classList.remove("dropdown-done")
+  }
+  });
+  const onClickMenu = () => {
+  const menu = document.getElementById('menu');
+  const ulist = document.querySelector('.ulist');
+  menu.addEventListener('click', () =>{
+  ulist.classList.toggle('ulist-active');
+  //animating the burger lines
+  menu.classList.toggle('change');
+  });
+  }
+  onClickMenu()

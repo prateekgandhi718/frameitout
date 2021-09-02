@@ -1,0 +1,420 @@
+*{
+    font-family: 'Playfair Display', serif;
+    margin: 0px;
+    padding: 0px;
+    
+    box-sizing: border-box;
+}
+#header{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  color: black;
+  justify-content: center;
+  padding-top: 1em;
+    
+}
+
+.ulist{
+  display: flex;
+  flex-wrap: wrap; 
+  /* important for responsiveness. */
+  padding: 2rem;
+  margin: 0rem;
+  list-style: none;
+  justify-content: center;
+    
+}
+
+.item{
+  padding: 2rem;
+  
+  align-items: center;
+  font-size: 1.3rem;
+
+
+}
+.social-container{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.4rem 1rem 0rem 49rem;
+}
+
+/* adding underline under the current tab  */
+.navigation .ulist .current{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+  }
+
+ /* adding dropdown */
+.dropdown-done .dropdown-nav {
+  opacity: 1;
+  /* transform: translateY(0); */
+  /* box-shadow: 0 4px 6px -1px rgba(243, 9, 9, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); */
+  transition: transform .3s cubic-bezier(0.88,-0.72, 0, 1), opacity .3s ease-in-out;
+  /* transform: translateY(-4rem); */
+  list-style: none;
+  margin: 0;
+  padding: 20px 6px 20px 6px;
+  position: absolute;
+  z-index: 1;
+  background: whitesmoke;
+  margin-top: 10px;
+  line-height: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown-close .dropdown-nav{
+  opacity: 0;
+
+  display: none;
+
+}
+
+
+.dropdown-nav {
+opacity: 0;
+
+display: none;
+}
+.dropdown-nav a{
+color: white;
+text-decoration: none;
+}
+
+
+/* Targeting the links only in the navigation menu. since the menu also has links of social media icons therefore .item is also written to specifically target the home,my works....*/
+
+.item a{
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    color: black;
+    
+}
+
+
+.item a:link {
+    color: black;
+  }
+  
+  /* visited link */
+/* .item a:visited {
+    color: ;
+  } */
+  
+  /* mouse over link */
+.item a:hover {
+    color: grey;
+  }
+  
+  /* selected link, the moment the link is clicked. */
+/* .item a:active {
+    text-overflow: ;
+  } */
+
+
+
+
+
+
+/* styling the social media icons */
+.fa {
+  padding: 14px 35px 0px 20px;
+  font-size: 25px !important;
+  width: 5px;
+  height: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: transparent;
+  color: black;
+  
+}
+
+/* Twitter */
+.fa-twitter {
+  background: transparent;
+  color: black;
+  
+}
+
+.fa-instagram {
+  background: transparent;
+  color: black;
+  
+}
+
+
+.blog a{
+  text-decoration: none;
+  color: black;
+}
+  .blog{
+      display: flex;
+      flex-direction: column;
+      padding: 4rem 1rem;
+      /* animation-duration: 1.4s;
+      animation-name: slidein; */
+      
+  }
+  @keyframes slidein {
+    from {
+      margin-left: 5%;
+      /* width: 100%; */
+    }
+  
+    to {
+      /* margin-left: 0%; */
+      /* width: 100%; */
+    }
+  }
+
+  .blog-date{
+      text-align: center;
+      font-size: 1.4rem;
+  }
+
+  .blog-title{
+    text-align: center;
+    font-size: 4rem;
+    padding: 4rem;
+    cursor: pointer;
+  }
+
+  .blog-image{
+    cursor: pointer;
+    padding: 1rem 1rem;
+    width: 100%;
+    /* width: 1646px; */
+    height: auto;
+    
+  }
+
+  .btn-position{
+    padding: 4rem;
+    text-align: center;
+  }
+  .btn-blog{
+    padding: 2rem;
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    width: 14rem;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+
+
+  footer{
+    background-color: whitesmoke !important;
+    padding: 3rem;
+    margin: 0px;
+}
+
+footer a{
+  text-decoration: none;
+  
+}
+
+.btn-container{
+  display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 1rem 0rem 2rem 0rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+  text-align: center;
+    color: white;
+    background-color: black;
+    font-size: 1.2rem;
+    transition: transform 0.7s ease 0s;
+    border-color: black;
+    padding: 1rem 1rem;
+    width: 12rem;
+    margin: 1rem 0rem;
+    height: 6rem;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(17, 17, 17);
+    
+    transform: scale(1.1);
+}
+
+.footermaterial, .footermaterial2{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+  /* margin: 60px 31px 31px 0px; */
+  font-size: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 0rem 1rem 0rem;
+    
+}
+
+#contactfooter{
+    font-style: italic;
+}
+#headingfooter{
+    font-size: 2.5rem;
+}
+
+
+/* ****************** Responsive  */
+
+@media screen and (max-width: 1791px){
+
+  .social-container {
+    padding: 1.4rem 1rem 0rem 7rem;
+  }
+}
+@media screen and (max-width: 1119px){
+
+  .social-container {
+    padding: 1.4rem 1rem 0rem 1rem;
+}
+}
+
+@media screen and (max-width: 550px){
+  body, html{
+    overflow-x: hidden;
+  }
+  .blog-title {
+    text-align: center;
+    font-size: 2rem;
+    padding: 0rem;
+  }
+  .btn-blog {
+    padding: 1rem;
+    font-size: 1rem;
+    width: 10rem;
+}
+
+#menu-bar {
+  padding: 3rem 2rem 0rem 2rem;
+}
+  #menu{
+    cursor: pointer;
+    width: 2.7rem;
+    height: 2.5rem;
+  }
+
+  .bar{
+    height: 5px;
+    width: 100%;
+    background-color: black;
+    display: block;
+    border-radius: 5px;
+    transition: 0.7s ease;
+  }
+  #bar1{
+    transform: translateY(-4px);
+  }
+  #bar3{
+    transform:translateY(4px)
+  }
+
+  .change #bar1{
+    transform: translateY(4px) rotateZ(-45deg);
+  }
+  .change #bar3{
+    transform: translateY(-6px) rotate(45deg);
+  }
+  .change #bar2{
+    opacity: 0;
+  }
+
+
+  .ulist{
+    position:absolute;
+    opacity: 0;
+    
+    
+  }
+  
+  .ulist-active{
+    display: grid;
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    grid-template-columns: auto;
+    text-align: center;
+    grid-gap: 0px;
+    padding: 0rem 0rem;
+    margin: 0rem 0rem;
+    list-style: none;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    position: static;
+    opacity: 1;
+    transition: opacity 1s linear;
+    /* z-index: 2; */
+  }
+    .item{
+      /* padding: 2rem; */
+      
+      align-items: center;
+      font-size: 1.3rem;
+    
+    }
+    
+    .social-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 1.4rem 0rem 10rem 2rem;
+    }
+
+
+
+}
+
+/* streamlining the nav for small screens  */
+@media screen and (max-width: 480px){
+  body, html{
+    overflow-x: hidden;
+  }
+
+  .ulist{
+    display: grid;
+    padding: 2rem;
+    margin: 0rem;
+    list-style: none;
+    justify-content: center;
+    grid-template-columns: auto;
+  }
+
+  .social-container {
+    padding: 0rem 0rem 0rem 1rem;
+}
+}

@@ -1,0 +1,140 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='blog1.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  title Reviews
+header#header Welcome to Frame it out
+nav.navigation
+  #menu-bar
+    #menu
+      #bar1.bar
+      #bar2.bar
+      #bar3.bar
+  ul.ulist
+    li.item
+      a(href='/fio')  Home
+    li.item.dropdown
+      a(href='/mywork')  My work 
+      a(href='#')
+        svg.icon(width='30' height='16' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 320 512' onclick='dropdown() ')
+          path(d='M151.5 347.8L3.5 201c-4.7-4.7-4.7-12.3 0-17l19.8-19.8c4.7-4.7 12.3-4.7 17 0L160 282.7l119.7-118.5c4.7-4.7 12.3-4.7 17 0l19.8 19.8c4.7 4.7 4.7 12.3 0 17l-148 146.8c-4.7 4.7-12.3 4.7-17 0z')
+      // Start of Dropdown
+      ul.dropdown-nav
+        li
+          a(href='/maternity') Maternity
+        li
+          a(href='/newborn') Newborn
+        li
+          a(href='/infant') Infant
+        li
+          a(href='/sitter') Sitter
+        li
+          a(href='/cakesmash') Cakesmash
+        li
+          a(href='/outdoor') Outdoor
+        li
+          a(href='/toddler') Toddler
+        li
+          a(href='/family') Family
+    li.item
+      a(href='/contact')  Contact
+    li.item.current
+      a(href='/blog')  Blog
+    li.item
+      a(href='/reviews')  Reviews
+    li.item
+      a(href='/about')  About
+    ul.social-container
+      a.fa.fa-facebook(href='https://www.facebook.com/Frameitout123/' target='_blank')
+      a.fa.fa-instagram(href='https://www.instagram.com/frameitout/' target='_blank')
+.blog-container
+  .blog-heading
+    p Pregnancy - Cravings and Aversions
+  br
+  br
+  .blog-material
+    p Written By Parul Agarwal
+  br
+  br
+  .blog-material
+    p
+      | When I started with Maternity Photography, I had just one thing in my mind, and that was to showcase the beauty of women carrying a tiny human, a tiny life inside her and how fascinating it was to showcase the incredible things a women&apos;s body can do. 
+      br
+      br
+      |                 Isn&apos;t this Journey of Pregnancy like this? With and in between all those mood swings of the lovely lady, the men are always trying and taking care of anything they crave for. 
+      br
+      br
+      |                 Kudos to the couple for living this beautiful phase of life and bringing a tiny little human in this world and into their life with so much love that now their life has become all about it.
+      br
+      br
+      |                 There are ideas and concepts always pouring on my To-Do board in my editing and planning room at Frame It Out Studio. There is so much I like to speak to the world through my pictures. But with Maternity Photography there was always something different that I wanted to do. And one thing that I could always relate with Pregnancy was having cravings for pickles, having cravings for cheese burst pizzas or having aversions for sweets and milk. 
+      br
+      br
+      |                 Time and again, I came up with many different ideas, tried many different gowns and poses over the last few years in my maternity photography sessions. But there was always something I wanted to bring, something fresh, something what I feel those lovely mothers-to-be will relate to. Something I feel anybody and everybody has heard about. Something I wanted the whole world to see through my pictures. Those sudden urge for a particular dish that this phase of life brings or those feelings of repulsion at the very thought of a certain kind of food, often the one that you previously enjoyed. And this happens to most women during pregnancy. 
+      br
+      br
+      |                 I bring to you my latest Maternity series &ldquo;Cravings and Aversions&rdquo;. Through my pictures I will try to bring alive the cravings and aversions that these beautiful pregnant ladies had. I will try to bring back those emotions for these lovely couples, who were there in it together. And Why Not? because I am sure, few years down the line, when they will look back, this is what they will like to talk about as a Family, this is what they will like to tell their little baby (now growing up) about. And, if you will then why not with an amazing portrait depicting everything.
+      br
+      |                 To all those Lovely Ladies who had experienced this beautiful phase of life... tell me about your cravings or distaste that you had experienced or experiencing....
+      br
+      br
+      |                 To all those lovely To be Mommies who have their Maternity Photography Session booked or will be booking with Frame It Out Photography in coming weeks or months, lets talk about it, One special picture for you from this Series in my style. Lets do this. &#x263A;&#xFE0F;
+  br
+  br
+  br
+  br
+  .blog-material-tags
+    p
+      | pregnancy | pregnancy cravings | pregnancy aversions | pregnancy distastes | pregnant ladies | pregnant woman | pregnant | maternity period | maternity photo shoot | maternity photography | maternity cravings | maternity aversions | maternity distastes | motherhood | parenthood
+nav.navigation-bottom
+  ul.ulist-bottom
+    li.item-bottom
+      a(href='/blog')  &olarr; Back to Blog 
+footer
+  .btn-container
+    a(href='/mywork')
+      button.btn(type='button')  View Portfolio
+    a(href='/contact')
+      button.btn(type='button')  Get in touch
+  div
+    p#headingfooter.footermaterial
+      | Frame It Out Photography By Parul Agarwal
+  div
+    p#contactfooter.footermaterial2
+      | Contact : +91-9873672580
+    p.footermaterial2
+      | Email : info@frameitoutphotography.com
+script.
+  //Dropdown open and close with the help of css and javascript. Toggling different classes of CSS with a click. .dropdown-done opens up the menu while .dropdown-close closes it.
+  let myworkicon = document.getElementsByTagName('svg');
+  let mywork = document.getElementsByClassName("dropdown")
+  function dropdown(){
+  // let mywork = document.getElementsByClassName("dropdown")
+  mywork[0].classList.add("dropdown-done")
+  mywork[0].classList.remove("dropdown-close")
+  }
+  document.addEventListener('click', function(event) {
+  var isClickInside = mywork[0].contains(event.target);
+  if (!isClickInside) {
+  //the click was outside the specifiedElement, do something
+  // alert("clicked outside!")
+  mywork[0].classList.add("dropdown-close")
+  mywork[0].classList.remove("dropdown-done")
+  }
+  });
+  const onClickMenu = () => {
+  const menu = document.getElementById('menu');
+  const ulist = document.querySelector('.ulist');
+  menu.addEventListener('click', () =>{
+  ulist.classList.toggle('ulist-active');
+  //animating the burger lines
+  menu.classList.toggle('change');
+  });
+  }
+  onClickMenu()
